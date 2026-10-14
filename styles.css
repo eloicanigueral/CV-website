@@ -12,11 +12,18 @@ body {
     color: red;
 }
 
-
-img{
-    width: 150px;
-    margin: 10px;
+nav{
+    position: sticky;
+    background-color: bisque;
+    padding: 10px;
+    margin: 5px;
+    top: 10px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+/*    z-index: -1; */
 }
+
 
 h1 {
     font-family:Georgia, Times, serif;
@@ -26,14 +33,20 @@ h1 {
 }
 
 h2{
-   font-family:Georgia, Times, serif;
-   font-style:italic;
+    font-family:Georgia, Times, serif;
+    font-style:italic;
 }
 
 p{
-   font-family:Verdana,Arial, serif;
+    font-family:Verdana,Arial, serif;
 }
 
+img{
+    width: 150px;
+    margin-top: 60px;
+    margin-right: 10px;
+    float: left;
+}
 
 .wrapper {
 	display: grid;
