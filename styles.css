@@ -1,7 +1,9 @@
+html { scroll-behavior: smooth; } /*per l'scroll quan toco un boto o algo...*/
 body {
     font-family:Verdana,Arial, serif;
     background-color: #dddddd;
-    width: 960px;
+    max-width: 960px; /*pq sigui "responsible"*/
+    width: 100%;
     margin: 0 auto;
     /*border:1px solid black;*/
     /* margin-right:15%;
@@ -12,7 +14,7 @@ body {
     color: red;
 }
 
-nav{
+header{ /*dont know why it doesnt work now with nav...*/
     position: sticky;
     background-color: bisque;
     padding: 10px;
@@ -47,7 +49,7 @@ img{
     width: 150px;
     margin-top: 60px;
     margin-right: 10px;
-    float: left;
+    float: left; /*i want it to float but only in the main section.. not the others*/
 }
 
 .wrapper {
