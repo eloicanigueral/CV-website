@@ -1,17 +1,21 @@
-html { scroll-behavior: smooth; } /*per l'scroll quan toco un boto o algo...*/
+* { box-sizing: border-box; } /*so that everything is really the size I specify (and the padding isn't added to it)*/
+
+:root { /*to set the color variables*/
+	--text: #000000;   --bg: #ffffff; --line: #777777; --g: #dddddd;
+}
+
+html { scroll-behavior: smooth; } /*to have a smooth scroll when jumping different sections / classes*/
+
 body {
-    font-family:Verdana,Arial, serif;
-    background-color: #dddddd;
-    max-width: 960px; /*pq sigui "responsible"*/
-    width: 100%;
-    margin: 0 auto;
-    /*border:1px solid black;*/
-    /* margin-right:15%;
-    margin-left:15%;
-    margin-top: 40px;
-    /* margin: 40px; */
-    font-size: 14px;
-    color: red;
+    margin: 0;
+    margin: 40px 15%; 
+    font-family:Verdana, Arial, serif;
+    background-color: var(--g);
+    color: var(--text);
+}
+
+a {  /*for the links always look the same, no changing color when visited*/
+    color: inherit;
 }
 
 header{ /*dont know why it doesnt work now with nav...*/
