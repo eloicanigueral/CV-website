@@ -1,12 +1,12 @@
-* { box-sizing: border-box; } /*so that everything is really the size I specify (and the padding isn't added to it)*/
+*{box-sizing: border-box;} /*so that everything is really the size I specify (and the padding isn't added to it)*/
 
-:root { /*to set the color variables*/
+:root{ /*to set the color variables*/
 	--text: #000000;   --bg: #ffffff; --line: #777777; --g: #dddddd;
 }
 
-html { scroll-behavior: smooth; } /*to have a smooth scroll when jumping different sections / classes*/
+html{scroll-behavior: smooth;} /*to have a smooth scroll when jumping different sections / classes*/
 
-body {
+body{
     margin: 0;
     margin: 40px 15%; 
     font-family:Verdana, Arial, serif;
@@ -14,46 +14,60 @@ body {
     color: var(--text);
 }
 
-a {  /*for the links always look the same, no changing color when visited*/
+a{  /*for the links always look the same, no changing color when visited*/
     color: inherit;
 }
 
-header{ /*dont know why it doesnt work now with nav...*/
-    position: sticky;
-    background-color: bisque;
+header{
+    position: sticky; /*ok.. it sticks to its father...(the body)*/
+    background-color: var(--bg);
     padding: 10px;
-    margin: 5px;
-    top: 10px;
-    display: flex;
-    gap: 40px;
+    top: 0px;
+    /*z-index: -1; /*good effect with the letters on top of it... for now-> diabled*/
+}
+/* dont know how to gap them (gap doesnt work) and how to move them as i want */
+nav{ 
+    display: flex; 
+    gap: 40px; 
     align-items: center;
-    justify-content: center;
-/*    z-index: -1; */
+    justify-content: center; 
 }
 
+h1{ /*have to look at this*/
+    margin: 0;
+    font-size: 70px;
+    text-align: center;
 
-h1 {
-    font-family:Georgia, Times, serif;
-    font-style:italic;
-    text-decoration: solid, underline;
     color: blue;
+    font-family:Georgia, Times, serif;
+    text-decoration: underline;
 }
 
-h2{
+h2{ /*have to look at this*/
+    font-size: 40px; 
+    margin: 0;
+
     font-family:Georgia, Times, serif;
     font-style:italic;
 }
 
 p{
+    /* max-width: 500px;  */
+    line-height: 1.6;
+
     font-family:Verdana,Arial, serif;
 }
 
-img{
-    position: relative; /*how can i do to make this at the same size despite doing zoom or not??...*/ /*w the relative position, it goes upper and passes through the nav bar, i have to put z-index: -1; and not to effect product imgs*/
+img{ /*i think i have to delete this.. bc all the img will be different sizes.. and diferent uses*/
+    /*position: relative; /*how can i do to make this at the same size despite doing zoom or not??...*/ /*w the relative position, it goes upper and passes through the nav bar, i have to put z-index: -1; and not to effect product imgs*/
     width: 150px;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-right: 10px;
     float: left; /*i want it to float but only in the main section.. not the others*/
+}
+
+#main{
+
 }
 
 .wrapper {
