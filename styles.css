@@ -22,7 +22,7 @@ header{
     background-color: var(--bg);
     padding: 10px;
     top: 0px;
-    /*z-index: -1; /*good effect with the letters on top of it... for now-> diabled*/
+    /*z-index: -1; /*good effect with the letters on top of it... for now-> diabled /// with 10 it goes upper*/
 }
 
 nav{ 
@@ -62,12 +62,18 @@ img{ /*i think i have to delete this.. bc all the img will be different sizes.. 
     width: 150px;
     margin-top: 30px;
     margin-right: 10px;
-    float: left; /*i want it to float but only in the main section.. not the others*/
+    /*float: left; /*i want it to float but only in the main section.. not the others*/
+}
+
+section{
+    min-height: 80svh;
+    padding: 80px 24px;
+    border-bottom: 1px solid var(--line);
 }
 
 #main{
-    position: relative;
-    min-height: 100svh;
+    /* position: relative; /*i think i dont need it*/
+    min-height: calc(100svh - 40px); /*all the screen - the header size*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -82,6 +88,11 @@ img{ /*i think i have to delete this.. bc all the img will be different sizes.. 
     display: flex; 
     gap: 24px; 
     align-items: center;
+}
+
+
+footer { 
+    padding: 24px; 
 }
 
 
