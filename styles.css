@@ -8,7 +8,6 @@ html{scroll-behavior: smooth;} /*to have a smooth scroll when jumping different 
 
 body{
     margin: 0;
-    margin: 40px 15%; 
     font-family:Verdana, Arial, serif;
     background-color: var(--g);
     color: var(--text);
@@ -25,15 +24,15 @@ header{
     top: 0px;
     /*z-index: -1; /*good effect with the letters on top of it... for now-> diabled*/
 }
-/* dont know how to gap them (gap doesnt work) and how to move them as i want */
+
 nav{ 
     display: flex; 
-    gap: 40px; 
-    align-items: center;
-    justify-content: center; 
+    gap: 40px; /*gap only works with flex or grid*/
+    align-items: center; /*align vertically*/
+    justify-content: center; /*horitzontal*/
 }
 
-h1{ /*have to look at this*/
+/*h1{ 
     margin: 0;
     font-size: 70px;
     text-align: center;
@@ -41,7 +40,7 @@ h1{ /*have to look at this*/
     color: blue;
     font-family:Georgia, Times, serif;
     text-decoration: underline;
-}
+}/*have to look at this*/
 
 h2{ /*have to look at this*/
     font-size: 40px; 
@@ -51,7 +50,7 @@ h2{ /*have to look at this*/
     font-style:italic;
 }
 
-p{
+p{ /*have to look at this*/
     /* max-width: 500px;  */
     line-height: 1.6;
 
@@ -67,8 +66,26 @@ img{ /*i think i have to delete this.. bc all the img will be different sizes.. 
 }
 
 #main{
-
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
 }
+#main h1{
+    margin: 0;
+    font-size: 70px;
+    text-align: center;
+}
+#main .contact{
+    display: flex; 
+    gap: 24px; 
+    align-items: center;
+}
+
+
+
 
 .wrapper {
 	display: grid;
