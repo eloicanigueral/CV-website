@@ -13,36 +13,37 @@ body{
     color: var(--text);
 }
 
-a{  /*for the links always look the same, no changing color when visited*/
-    color: inherit;
-}
-
 header{ /*try to make this quite blur?...*/
     position: sticky; /*ok.. it sticks to its father...(the body)*/
     background-color: var(--bg);
     padding: 10px;
     top: 0px;
+    font-size: large;
     /*z-index: -1; /*good effect with the letters on top of it... for now-> diabled /// with 10 it goes upper*/
 }
 
-nav{ 
+nav{ /*idk if the gapp should be like this...*/
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 70%; /*idk if this should be like this...*/
+}
+
+ul{
     display: flex; 
     gap: 40px; /*gap only works with flex or grid*/
     align-items: center; /*align vertically*/
     justify-content: center; /*horitzontal*/
+    list-style: none;
 }
 
-/*h1{ 
-    margin: 0;
-    font-size: 70px;
-    text-align: center;
+/*have to quit the underline... at least at the header*/
+a{  /*for the links always look the same, no changing color when visited*/
+    color: inherit;
+}
 
-    color: blue;
-    font-family:Georgia, Times, serif;
-    text-decoration: underline;
-}/*have to look at this*/
 
-h2{ /*have to look at this*/
+h2{ /*have to look at this \\\  titles for the sections */
     font-size: 40px; 
     margin: 0;
 
@@ -73,18 +74,21 @@ section{
 
 #main{
     /* position: relative; /*i think i dont need it*/
-    min-height: calc(100svh - 40px); /*all the screen - the header size*/
+    min-height: calc(100svh - 70px); /*all the screen - the header size, i dont know how to calc the header size...*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 24px;
 }
 #main h1{
-    margin: 0;
+    margin: 5% 20%;
     font-size: 70px;
     text-align: center;
 }
-#main .contact{
+#main strong{
+    color: #777777;
+}
+#main .contact{ /*how i align this to the left??*/
     display: flex; 
     gap: 24px; 
     align-items: center;
@@ -94,6 +98,11 @@ section{
 footer { 
     padding: 24px; 
 }
+
+
+
+
+
 
 
 
