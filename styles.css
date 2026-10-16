@@ -17,7 +17,7 @@ a{  /*for the links always look the same, no changing color when visited*/
     color: inherit;
 }
 
-header{
+header{ /*try to make this quite blur?...*/
     position: sticky; /*ok.. it sticks to its father...(the body)*/
     background-color: var(--bg);
     padding: 10px;
