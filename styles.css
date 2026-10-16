@@ -15,40 +15,45 @@ body{
 
 header{ /*try to make this quite blur?...*/
     position: sticky; /*ok.. it sticks to its father...(the body)*/
-    background-color: var(--bg);
-    padding: 10px;
     top: 0px;
+    height: 60px;
+    padding: 10px 24px;
+    /* background: var(--bg); /* no special color needed? it doesnt work*/
     font-size: large;
+    backdrop-filter: blur(10px);
     /*z-index: -1; /*good effect with the letters on top of it... for now-> diabled /// with 10 it goes upper*/
 }
 
-nav{ /*idk if the gapp should be like this...*/
+nav{
     display: flex;
     align-items: center;
     font-weight: bold;
-    gap: 70%; /*idk if this should be like this...*/
+    justify-content: space-between;
 }
 
-ul{
+/*nav*/ ul{
     display: flex; 
     gap: 40px; /*gap only works with flex or grid*/
     align-items: center; /*align vertically*/
-    justify-content: center; /*horitzontal*/
     list-style: none;
 }
 
-/*have to quit the underline... at least at the header*/
-a{  /*for the links always look the same, no changing color when visited*/
-    color: inherit;
+/*nav*/ a{  
+    color: inherit; /*for the links always look the same, no changing color when visited*/
+    text-decoration: none; /*non underlined*/
 }
 
+span{
+    color: #777777;
+    font-weight: bold;
+}
 
 h2{ /*have to look at this \\\  titles for the sections */
     font-size: 40px; 
     margin: 0;
 
-    font-family:Georgia, Times, serif;
-    font-style:italic;
+    font-family: Georgia, Times, serif;
+    font-style: italic;
 }
 
 p{ /*have to look at this*/
@@ -68,13 +73,14 @@ img{ /*i think i have to delete this.. bc all the img will be different sizes.. 
 
 section{
     min-height: 80svh;
-    padding: 80px 24px;
+    padding: 40px 24px; /* idk how to do this...*/
     border-bottom: 1px solid var(--line);
+    
 }
 
 #main{
     /* position: relative; /*i think i dont need it*/
-    min-height: calc(100svh - 70px); /*all the screen - the header size, i dont know how to calc the header size...*/
+    min-height: calc(100svh - 60px); /*all the screen - the header size, i dont know how to calc the header size...*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -85,13 +91,14 @@ section{
     font-size: 70px;
     text-align: center;
 }
-#main strong{
-    color: #777777;
-}
-#main .contact{ /*how i align this to the left??*/
+#main .contact{
     display: flex; 
     gap: 24px; 
     align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    /* padding: 16px 0; */
 }
 
 
