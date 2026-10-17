@@ -1,7 +1,7 @@
 *{box-sizing: border-box;} /*so that everything is really the size I specify (and the padding isn't added to it)*/
 
 :root{ /*to set the color variables*/
-	--text: #000000;   --bg: #ffffff; --line: #777777; --g: #dddddd;
+	--text: #000000;   --bg: #ffffff; --secondary: #777777; --g: #dddddd;
 }
 
 html{scroll-behavior: smooth;} /*to have a smooth scroll when jumping different sections / classes*/
@@ -13,7 +13,7 @@ body{
     color: var(--text);
 }
 
-header{ /*try to make this quite blur?...*/
+header{
     position: sticky; /*ok.. it sticks to its father...(the body)*/
     top: 0px;
     height: 60px;
@@ -21,7 +21,6 @@ header{ /*try to make this quite blur?...*/
     /* background: var(--bg); /* no special color needed? it doesnt work*/
     font-size: large;
     backdrop-filter: blur(10px);
-    /*z-index: -1; /*good effect with the letters on top of it... for now-> diabled /// with 10 it goes upper*/
 }
 
 nav{
@@ -31,7 +30,9 @@ nav{
     justify-content: space-between;
 }
 
-/*nav*/ ul{
+ul{
+    margin: 5px; 
+    padding: 10px;
     display: flex; 
     gap: 40px; /*gap only works with flex or grid*/
     align-items: center; /*align vertically*/
@@ -44,7 +45,7 @@ nav{
 }
 
 span{
-    color: #777777;
+    color: var(--secondary);
     font-weight: bold;
 }
 
@@ -74,7 +75,7 @@ img{ /*i think i have to delete this.. bc all the img will be different sizes.. 
 section{
     min-height: 80svh;
     padding: 40px 24px; /* idk how to do this...*/
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--secondary);
     
 }
 
@@ -96,10 +97,48 @@ section{
     gap: 24px; 
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    border-top: 1px solid var(--secondary);
+    border-bottom: 1px solid var(--secondary);
     /* padding: 16px 0; */
 }
+
+
+
+#about{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    gap: 24px;
+}
+#about p{ 
+    font-size: 28px; 
+    font-weight: bold; 
+    margin-top: 0; 
+}
+#about h3{
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--secondary); 
+}
+.skill-types{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 50px;
+}
+.skills{ 
+    flex-wrap: wrap; /*to wrap one below the other if case*/
+    gap: 8px; 
+}
+.skills li{
+    border: 1px solid var(--text);
+    border-radius: 20px; /* to make it round, as a pill*/
+    padding: 5px 15px;
+    transition: background .2s, color .2s;  /*to make the change of color smoother*/
+}
+.skills li:hover { 
+    background: var(--text); 
+    color: var(--bg); 
+}
+
 
 
 footer { 
