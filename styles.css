@@ -76,7 +76,10 @@ section{
     min-height: 80svh;
     padding: 40px 24px; /* idk how to do this...*/
     border-bottom: 1px solid var(--secondary);
-    
+
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    gap: 24px;  
 }
 
 #main{
@@ -104,11 +107,6 @@ section{
 
 
 
-#about{
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    gap: 24px;
-}
 #about p{ 
     font-size: 28px; 
     font-weight: bold; 
@@ -134,11 +132,10 @@ section{
     padding: 5px 15px;
     transition: background .2s, color .2s;  /*to make the change of color smoother*/
 }
-.skills li:hover { 
+.skills li:hover{ 
     background: var(--text); 
     color: var(--bg); 
 }
-
 
 
 footer { 
